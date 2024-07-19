@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppHub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>AppHub</h1>
+    </nav>
+  </header>
+  <main>
+    <div id="search-container">
+      <input type="text" id="search" placeholder="Search for apps...">
+      <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="app-list">
+      <div class="app-card">
+        <img src="images/how_to_add_app.png" alt="How to Add an App">
+        <h3>How to Add an App</h3>
+        <p>Learn how to add a new app to the application hub.</p>
+        <button onclick="location.href='/apps/how_to_add_app/how_to_add_app.html'">Learn More</button>
+      </div>
+      <div class="app-card">
+        <img src="images/calculator.png" alt="Calculator">
+        <h3>Calculator</h3>
+        <p>A simple calculator app.</p>
+        <button onclick="location.href='/apps/calculator/calculator.html'">Use app</button>
+      </div>
+      <div class="app-card">
+        <img src="images/todo.png" alt="ToDo List">
+        <h3>ToDo List</h3>
+        <p>A simple ToDo List app.</p>
+        <button onclick="location.href='/apps/todo/todo.html'">Use app</button>
+      </div>
+      <div class="app-card">
+        <img src="images/chmod_calculator.png" alt="Chmod Calculator">
+        <h3>Chmod Calculator</h3>
+        <p>Instantly convert Linux file permissions based on your selections.</p>
+        <button onclick="location.href='/apps/chmod_calculator/chmod_calculator.html'">Use app</button>
+      </div>
+      <div class="app-card">
+        <img src="images/subnet_calculator.png" alt="Subnet Calculator">
+        <h3>Subnet Calculator</h3>
+        <p>Calculate network subnets easily. Created by moabukar.</p>
+        <button onclick="location.href='/apps/subnet_calculator/index.html'">Use app</button>
+      </div>
+      <div class="app-card">
+        <img src="images/job_tracker_pro.png" alt="Job Tracker Pro">
+        <h3>Job Tracker Pro</h3>
+        <p>Track your job applications and download them as a CSV file. Created by moabukar.</p>
+        <button onclick="location.href='/apps/job_tracker_pro/job_tracker_pro.html'">Use app</button>
+      </div>
+    
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 AppHub. All rights reserved.</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>

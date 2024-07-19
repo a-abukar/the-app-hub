@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Add an App</title>
+    <link rel="stylesheet" href="how_to_add_app_styles.css">
+    <script src="how_to_add_app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../../images/how_to_add_app.png" alt="AppHub Logo">
+            <h1>How to Add an App</h1>
+        </header>
+        <div class="app-input">
+            <label for="appName">Enter App Name:</label>
+            <input type="text" id="appName" placeholder="e.g., todo">
+            <button id="generateBtn">Generate Code</button>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <button class="collapsible">Step 1: Create the Directory Structure</button>
+                <div class="content">
+                    <p>Create a new directory for your app under <code>public/apps/</code>. For example, if your app is named <code>todo</code>, create the following structure:</p>
+                    <pre><code id="dirStructure"></code></pre>
+                    <button class="copyBtn" data-target="dirStructure">Copy</button>
+                </div>
+            </div>
+            <div class="step">
+                <button class="collapsible">Step 2: Create the HTML File</button>
+                <div class="content">
+                    <p>Create an HTML file named <code>todo.html</code> in your app directory. Here’s an example content:</p>
+                    <pre><code id="htmlCode"></code></pre>
+                    <button class="copyBtn" data-target="htmlCode">Copy</button>
+                </div>
+            </div>
+            <div class="step">
+                <button class="collapsible">Step 3: Create the CSS File</button>
+                <div class="content">
+                    <p>Create a CSS file named <code>todo_styles.css</code> in your app directory. Here’s an example content:</p>
+                    <pre><code id="cssCode"></code></pre>
+                    <button class="copyBtn" data-target="cssCode">Copy</button>
+                </div>
+            </div>
+            <div class="step">
+                <button class="collapsible">Step 4: Create the JavaScript File</button>
+                <div class="content">
+                    <p>Create a JavaScript file named <code>todo.js</code> in your app directory. Here’s an example content:</p>
+                    <pre><code id="jsCode"></code></pre>
+                    <button class="copyBtn" data-target="jsCode">Copy</button>
+                </div>
+            </div>
+            <div class="step">
+                <button class="collapsible">Step 5: Add Routes to server.js</button>
+                <div class="content">
+                    <p>In your <code>server.js</code> file, add routes to serve your app’s HTML, CSS, and JavaScript files:</p>
+                    <pre><code id="serverCode"></code></pre>
+                    <button class="copyBtn" data-target="serverCode">Copy</button>
+                </div>
+            </div>
+            <div class="step">
+                <button class="collapsible">Step 6: Add the App Card to index.html</button>
+                <div class="content">
+                    <p>In your <code>index.html</code> file, add a card for your new app:</p>
+                    <pre><code id="indexCode"></code></pre>
+                    <button class="copyBtn" data-target="indexCode">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

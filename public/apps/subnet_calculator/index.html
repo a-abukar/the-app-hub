@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnet Ninja</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Subnet Ninja</h1>
+            <div class="theme-selector">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select" onchange="changeTheme()">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <h2>Subnet Calculator</h2>
+                <input type="text" id="network" placeholder="Network Address (e.g., 192.168.1.0)">
+                <input type="text" id="subnetMask" placeholder="Subnet Mask (e.g., 24)">
+                <button onclick="calculateSubnet()">Calculate</button>
+                <div class="result" id="result"></div>
+                <button class="copy-button" onclick="copyResults()">Copy Results</button>
+            </div>
+            <div class="history">
+                <h2>Calculation History</h2>
+                <div id="history"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker Pro</title>
+    <link rel="stylesheet" href="job_tracker_pro_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Job Tracker Pro</h1>
+            <p>Your ultimate tool to manage and track job applications effortlessly.</p>
+        </header>
+        <main>
+            <section class="form-section">
+                <h2>Add a New Job Application</h2>
+                <form id="jobForm" class="form-grid">
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="e.g., Google">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role Title</label>
+                        <input type="text" id="role" name="role" placeholder="e.g., Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salary/Rate</label>
+                        <input type="text" id="salary" name="salary" placeholder="e.g., £50,000/year">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link to Job Description</label>
+                        <input type="url" id="link" name="link" placeholder="e.g., https://jobdescription.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Application Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactName">Contact Name</label>
+                        <input type="text" id="contactName" name="contactName" placeholder="e.g., John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Contact Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g., john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Contact Phone</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g., +44 1234 567890">
+                    </div>
+                    <div class="form-group">
+                        <label for="response">Response</label>
+                        <select id="response" name="response">
+                            <option value="Pending">Pending</option>
+                            <option value="Interview">Interview</option>
+                            <option value="Offer">Offer</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stage1">Interview Stage 1</label>
+                        <input type="text" id="stage1" name="stage1" placeholder="e.g., Phone Interview">
+                    </div>
+                    <div class="form-group">
+                        <label for="stage2">Interview Stage 2</label>
+                        <input type="text" id="stage2" name="stage2" placeholder="e.g., Technical Interview">
+                    </div>
+                    <div class="form-group">
+                        <label for="stage3">Interview Stage 3</label>
+                        <input type="text" id="stage3" name="stage3" placeholder="e.g., On-site Interview">
+                    </div>
+                    <div class="form-group">
+                        <label for="stage4">Interview Stage 4</label>
+                        <input type="text" id="stage4" name="stage4" placeholder="e.g., Final Interview">
+                    </div>
+                    <div class="form-group">
+                        <label for="days">Days Since Application</label>
+                        <input type="number" id="days" name="days" placeholder="e.g., 15">
+                    </div>
+                    <div class="form-group">
+                        <label for="offer">Offer (RAG)</label>
+                        <input type="text" id="offer" name="offer" placeholder="e.g., Green, Amber, Red">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Offer Amount</label>
+                        <input type="text" id="amount" name="amount" placeholder="e.g., £60,000">
+                    </div>
+                    <div class="form-group">
+                        <label for="negotiated">Negotiated</label>
+                        <input type="text" id="negotiated" name="negotiated" placeholder="e.g., Yes/No">
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit">Add Job</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="table-section">
+                <h2>Job Applications</h2>
+                <div class="table-container">
+                    <table id="jobTable">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Role Title</th>
+                                <th>Salary/Rate</th>
+                                <th>Link to Job Description</th>
+                                <th>Application Date</th>
+                                <th>Contact Name</th>
+                                <th>Contact Email</th>
+                                <th>Contact Phone</th>
+                                <th>Response</th>
+                                <th>Interview Stage 1</th>
+                                <th>Interview Stage 2</th>
+                                <th>Interview Stage 3</th>
+                                <th>Interview Stage 4</th>
+                                <th>Days Since Application</th>
+                                <th>Offer (RAG)</th>
+                                <th>Offer Amount</th>
+                                <th>Negotiated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="downloadCsv">Download CSV</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="job_tracker_pro.js"></script>
+</body>
+</html>
