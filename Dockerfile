@@ -9,6 +9,8 @@ FROM node:14-alpine
 
 WORKDIR /app
 
+RUN apk add --no-cache python3
+
 COPY --from=builder /app/node_modules /app/node_modules
 
 COPY --from=builder /app /app
