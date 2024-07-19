@@ -66,13 +66,13 @@ Each application within AppHub has its own set of features and functionality. Re
 
 ### Create a new directory:
 
-Inside the src/apps directory, create a new folder for your application.
+Inside the src/apps directory, create a new folder for your application. 
 
-### Develop your application:
+### Develop your application:
 
 Add your application code (HTML, CSS, JavaScript) within the new folder. Ensure your application follows the structural and coding guidelines of AppHub.
 
-### Update navigation:
+### Update navigation:
 
 Add a new entry in the navigation menu to link to your application.
 
@@ -81,7 +81,7 @@ Add a new entry in the navigation menu to link to your application.
 Test your application thoroughly within the AppHub environment and ensure seamless integration. Once tested, deploy the updated AppHub.
 
 
-## Contributing
+## Contributing
 
 We welcome contributions! Follow these steps to contribute:
 
