@@ -3,8 +3,12 @@ name: the-app-hub
 on:
   push:
     paths:
-    - .github/workflows/ci.yml
-    - ./Dockerfile
+      - .github/workflows/ci.yml
+      - Dockerfile
+      - public/**/*
+      - server.js
+      - package.json
+      - package-lock.json
 
 jobs:
   build-and-publish:
@@ -42,4 +46,3 @@ jobs:
           docker tag $primary_tag $retention_tag
           docker push $retention_tag
         fi
-
