@@ -2,6 +2,9 @@
 
 AppHub is a centralised platform designed to manage and showcase multiple web applications. Each application within The AppHub can be easily accessed, used, and managed through a clean and intuitive interface. This project aims to streamline the deployment and maintenance of various web apps, providing a seamless experience for both developers and users.
 
+![AppHub Logo](./AppHub.jpeg)
+
+
 ## Features
 
 - Centralized management of multiple web applications
