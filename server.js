@@ -25,7 +25,7 @@ app.get('/apps/chmod_calculator/chmod_styles.css', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/apps/chmod_calculator/chmod_styles.css'));
 });
 
-app.post('/calculate-chmod', (req, res) => {
+app.post('/api/calculate-chmod', (req, res) => {
   const data = req.body;
   console.log(`Received data: ${JSON.stringify(data)}`);
 
@@ -75,7 +75,7 @@ app.get('/apps/subnet_calculator/script.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/apps/subnet_calculator/script.js'));
 });
 
-app.post('/calculate-subnet', (req, res) => {
+app.post('/api/calculate-subnet', (req, res) => {
   const { network, subnetMask } = req.body;
   const pythonProcess = spawn('python3', ['public/apps/subnet_calculator/subnet_calculator.py']);
 
