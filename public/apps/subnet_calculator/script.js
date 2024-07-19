@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const network = document.getElementById('network').value;
     const subnetMask = document.getElementById('subnetMask').value;
   
-    fetch('/calculate-subnet', {
+    fetch('/api/calculate-subnet', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
