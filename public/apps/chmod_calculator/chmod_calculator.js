@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       public_execute: document.getElementById('public-execute').checked,
     };
 
-    fetch('/calculate-chmod', {
+    fetch('api/calculate-chmod', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
