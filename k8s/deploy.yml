@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: the-app-hub
-        image: moabukar/the-app-hub:c951521
+        image: moabukar/the-app-hub:f2c53ad
         ports:
         - containerPort: 3000
 
@@ -30,6 +30,11 @@ spec:
     app: the-app-hub
   type: ClusterIP
   ports:
-  - protocol: TCP
+  - name: http
+    protocol: TCP
     port: 80
+    targetPort: 3000
+  - name: app-port
+    protocol: TCP
+    port: 8086
     targetPort: 3000
