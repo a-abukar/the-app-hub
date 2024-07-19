@@ -16,3 +16,4 @@ RUN chmod +x /app/public/apps/subnet_calculator/subnet_calculator.py
 EXPOSE 3000
 
 CMD ["node", "server.js"]
+
