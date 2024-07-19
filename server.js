@@ -25,7 +25,7 @@ app.get('/apps/chmod_calculator/chmod_styles.css', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/apps/chmod_calculator/chmod_styles.css'));
 });
 
-app.post('/calculate', (req, res) => {
+app.post('/calculate-chmod', (req, res) => {
   const data = req.body;
   console.log(`Received data: ${JSON.stringify(data)}`);
 
