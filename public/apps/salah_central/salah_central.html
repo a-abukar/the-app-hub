@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salah Central</title>
+  <link rel="stylesheet" href="salah_central_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Salah Central</h1>
+  </header>
+  <main>
+    <div id="location-selector">
+      <select id="location">
+        <option value="London,United Kingdom">London, UK</option>
+        <option value="Mogadishu,Somalia">Mogadishu, Somalia</option>
+        <option value="Dhaka,Bangladesh">Dhaka, Bangladesh</option>
+      </select>
+      <button onclick="fetchPrayerTimes()">Get Prayer Times</button>
+    </div>
+    <div id="prayer-times">
+      <div id="date"></div>
+      <div id="times" class="times-container"></div>
+    </div>
+  </main>
+  <script src="salah_central.js"></script>
+</body>
+</html>

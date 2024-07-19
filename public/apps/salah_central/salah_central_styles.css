@@ -1,0 +1,98 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px #333;
+}
+
+#location-selector {
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #2a5298;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #2a5298;
+  color: #ffffff;
+}
+
+#prayer-times {
+  margin-top: 20px;
+}
+
+#date {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.times-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.time {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.time i {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.time p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .time {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .time {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

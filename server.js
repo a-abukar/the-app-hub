@@ -128,6 +128,34 @@ app.get('/apps/how_to_add_app/how_to_add_app.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/apps/how_to_add_app/how_to_add_app.js'));
 });
 
+// Salah Central app
+
+app.get('/apps/salah_central/salah_central.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/apps/salah_central/salah_central.html'));
+});
+
+app.get('/apps/salah_central/salah_central.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/apps/salah_central/salah_central.js'));
+});
+
+app.get('/apps/salah_central/salah_central_styles.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/apps/salah_central/salah_central_styles.css'));
+});
+
+app.get('/api/prayer-times', (req, res) => {
+  const city = req.query.city;
+  const country = req.query.country;
+  const date = req.query.date;
+  const apiURL = `https://api.aladhan.com/v1/timingsByCity/${date}?city=${city}&country=${country}&method=2`;
+
+  fetch(apiURL)
+    .then(response => response.json())
+    .then(data => res.json(data))
+    .catch(error => {
+      console.error('Error fetching prayer times:', error);
+      res.status(500).json({ error: 'Error fetching prayer times' });
+    });
+});
 
 
 app.listen(port, () => {
