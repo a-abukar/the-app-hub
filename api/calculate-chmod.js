@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = (req, res) => {
   const data = req.body;
 
-  const pythonProcess = spawn('python3', [path.join(__dirname, '../apps/chmod_calculator/chmod_calculator.py')]);
+  const pythonProcess = spawn('python3', [path.join(__dirname, '../public/apps/chmod_calculator/chmod_calculator.py')]);
 
   let resultData = '';
   let errorData = '';

@@ -11,9 +11,10 @@
     }
   ],
   "routes": [
-    { "src": "/api/calculate", "dest": "/api/calculate-chmod.js" },
+    { "src": "/api/calculate-chmod", "dest": "/api/calculate-chmod.js" },
     { "src": "/api/calculate-subnet", "dest": "/api/calculate-subnet.js" },
     { "src": "/apps/(.*)", "dest": "/public/apps/$1" },
+    { "src": "/images/(.*)", "dest": "/public/images/$1" },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }

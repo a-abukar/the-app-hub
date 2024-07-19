@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = (req, res) => {
   const { network, subnetMask } = req.body;
-  const pythonProcess = spawn('python3', [path.join(__dirname, '../apps/subnet_calculator/subnet_calculator.py')]);
+  const pythonProcess = spawn('python3', [path.join(__dirname, '../public/apps/subnet_calculator/subnet_calculator.py')]);
 
   pythonProcess.stdin.write(JSON.stringify({ network, subnetMask }));
   pythonProcess.stdin.end();
