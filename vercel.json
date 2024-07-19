@@ -2,18 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**/*",
-      "use": "@vercel/static-build"
+      "src": "api/server.js",
+      "use": "@vercel/node"
     },
     {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/api/calculate", "dest": "/api/calculate-chmod.js" },
-    { "src": "/api/calculate-subnet", "dest": "/api/calculate-subnet.js" },
-    { "src": "/apps/(.*)", "dest": "/public/apps/$1" },
+    { "src": "/api/(.*)", "dest": "/api/server.js" },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
