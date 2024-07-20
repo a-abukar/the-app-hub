@@ -1,4 +1,5 @@
 const express = require('express');
+const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 const { spawn } = require('child_process');
 const path = require('path');
@@ -145,12 +146,15 @@ app.get('/apps/salah_central/salah_central_styles.css', (req, res) => {
 app.get('/api/prayer-times', (req, res) => {
   const city = req.query.city;
   const country = req.query.country;
-  const date = req.query.date;
-  const apiURL = `https://api.aladhan.com/v1/timingsByCity/${date}?city=${city}&country=${country}&method=2`;
+  const apiURL = `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=2`;
+
+  console.log(`Fetching prayer times from: ${apiURL}`);
 
   fetch(apiURL)
     .then(response => response.json())
-    .then(data => res.json(data))
+    .then(data => {
+      res.json(data);
+    })
     .catch(error => {
       console.error('Error fetching prayer times:', error);
       res.status(500).json({ error: 'Error fetching prayer times' });
